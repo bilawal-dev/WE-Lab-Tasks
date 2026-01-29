@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 3 - HTML5 Elements</title>
+</head>
+<body>
+
+<h3>HTML 5 color Element</h3>
+Select your favorite color:
+<input type="color">
+<br><br>
+
+<h3>HTML 5 input restriction as number</h3>
+Quantity (between 1 and 5):
+<input type="number" min="1" max="5" value="5">
+<input type="submit" value="Send">
+<br><br>
+
+<h3>HTML 5 data Encryption</h3>
+<form>
+Username:
+<input type="text" value="admin">
+Encryption:
+<select>
+    <option>1024 (Low Grade)</option>
+    <option selected>2048 (High Grade)</option>
+    <option>4096 (Very High Grade)</option>
+</select>
+<input type="submit" value="Submit">
+</form>
+
+<h3>HTML 5 date picker</h3>
+Birthday:
+<input type="date">
+<input type="submit" value="Send">
+<br><br>
+
+<h3>HTML 5 Audio Element</h3>
+<audio controls>
+    <source src="audio.mp3" type="audio/mpeg">
+</audio>
+
+<h3>HTML 5 CANVAS (graphics and text)</h3>
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid black;"></canvas>
+
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.font = "30px Arial";
+    ctx.fillText("Hello World", 50, 80);
+</script>
+
+</body>
+</html>
