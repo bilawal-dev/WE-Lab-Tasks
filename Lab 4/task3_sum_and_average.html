@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 3: Sum and Average of 3 Integers</title>
+</head>
+<body>
+    <h1>Task 3: Sum and Average of 3 Integers</h1>
+
+    <p>Prompt user to input 3 integers and return sum and average in a dialogue box.</p>
+
+    <button onclick="calculateSumAverage()">Calculate Sum & Average</button>
+
+    <script>
+        function calculateSumAverage() {
+            let num1 = parseInt(prompt("Enter first integer:"));
+            let num2 = parseInt(prompt("Enter second integer:"));
+            let num3 = parseInt(prompt("Enter third integer:"));
+
+            if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+                alert("Invalid input!");
+                return;
+            }
+
+            let sum = num1 + num2 + num3;
+            let average = sum / 3;
+
+            alert("Numbers: " + num1 + ", " + num2 + ", " + num3 + 
+                  "\nSum: " + sum + 
+                  "\nAverage: " + average.toFixed(2));
+        }
+    </script>
+</body>
+</html>

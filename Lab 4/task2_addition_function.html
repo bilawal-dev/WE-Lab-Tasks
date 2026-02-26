@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 2: Addition Function</title>
+    <script>
+        function addTwoNumbers(a, b) {
+            return a + b;
+        }
+    </script>
+</head>
+<body>
+    <h1>Task 2: Addition Function</h1>
+
+    <h2>Function: addTwoNumbers(a, b)</h2>
+
+    <p>This function adds two integers and returns the sum.</p>
+
+    <button onclick="alert('5 + 3 = ' + addTwoNumbers(5, 3))">Add 5 + 3</button>
+    <button onclick="alert('10 + 20 = ' + addTwoNumbers(10, 20))">Add 10 + 20</button>
+    <button onclick="testCustomAddition()">Custom Addition</button>
+
+    <script>
+        function testCustomAddition() {
+            let num1 = parseInt(prompt("Enter first number:"));
+            let num2 = parseInt(prompt("Enter second number:"));
+
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("Invalid input!");
+                return;
+            }
+
+            let sum = addTwoNumbers(num1, num2);
+            alert(num1 + " + " + num2 + " = " + sum);
+        }
+    </script>
+</body>
+</html>

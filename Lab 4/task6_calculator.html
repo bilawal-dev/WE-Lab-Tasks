@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 6: Standard Calculator</title>
+    <script src="task6_calculator.js"></script>
+</head>
+<body>
+    <h1>Task 6: Standard Calculator</h1>
+
+    <p>Click the button below to use the calculator</p>
+
+    <button onclick="useCalculator()">Start Calculator</button>
+
+    <script>
+        function useCalculator() {
+            let num1 = prompt("Enter first number:");
+            if (num1 === null) return;
+
+            let operator = prompt("Enter operator (+, -, *, /):");
+            if (operator === null) return;
+
+            let num2 = prompt("Enter second number:");
+            if (num2 === null) return;
+
+            let result = performCalculation(num1, operator, num2);
+            alert(num1 + " " + operator + " " + num2 + " = " + result);
+        }
+    </script>
+</body>
+</html>

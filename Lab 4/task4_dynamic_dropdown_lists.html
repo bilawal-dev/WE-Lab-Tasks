@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 4: Dropdown from Array</title>
+    <script>
+        let fruits = ["Apple", "Banana", "Orange", "Mango", "Grapes"];
+        let countries = ["USA", "UK", "Canada", "Australia", "Pakistan"];
+
+        function createDropdown(arrayName, selectId) {
+            let array = arrayName === "fruits" ? fruits : countries;
+            let select = document.getElementById(selectId);
+            select.innerHTML = "";
+
+            array.forEach(item => {
+                let option = document.createElement("option");
+                option.text = item;
+                option.value = item;
+                select.appendChild(option);
+            });
+        }
+
+        window.onload = function() {
+            createDropdown("fruits", "fruitSelect");
+            createDropdown("countries", "countrySelect");
+        };
+    </script>
+</head>
+<body>
+    <h1>Task 4: Dropdown List from JavaScript Array</h1>
+
+    <h2>Fruits (from array)</h2>
+    <select id="fruitSelect"></select>
+
+    <h2>Countries (from array)</h2>
+    <select id="countrySelect"></select>
+
+    <p><strong>Note:</strong> All dropdown options are created from JavaScript arrays, NOT from HTML option tags.</p>
+</body>
+</html>

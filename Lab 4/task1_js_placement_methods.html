@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 1: JavaScript Placement</title>
+    <script>
+        // JavaScript in HEAD section
+        function headFunction() {
+            alert("This function is in HEAD section");
+        }
+    </script>
+</head>
+<body>
+    <h1>Task 1: JavaScript Placement</h1>
+
+    <h2>3 Ways to Place JavaScript:</h2>
+
+    <h3>1. In HEAD Section</h3>
+    <p>The headFunction() is defined in the &lt;head&gt; tag above.</p>
+    <button onclick="headFunction()">Test HEAD Function</button>
+
+    <h3>2. In BODY Section</h3>
+    <p>See the script tag at the bottom of this page (before &lt;/body&gt;).</p>
+    <button onclick="bodyFunction()">Test BODY Function</button>
+
+    <h3>3. As External File</h3>
+    <p>The calculator file (task6_calculator.js) is an example of external JavaScript.</p>
+
+    <!-- JavaScript in BODY section -->
+    <script>
+        function bodyFunction() {
+            alert("This function is in BODY section (at the end)");
+        }
+    </script>
+</body>
+</html>

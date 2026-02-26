@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 7: Operators Demonstration</title>
+</head>
+<body>
+    <h1>Task 7: Operators Demonstration</h1>
+
+    <button onclick="demonstrateOperators()">View Operator Results</button>
+
+    <h2 id="results"></h2>
+
+    <script>
+        function demonstrateOperators() {
+            let y = 1;
+            let x;
+            let output = "";
+
+            x = y + 1;
+            output += "x = y + 1 ... Result = " + x + "\n";
+
+            x += y;
+            output += "x += y ... Result = " + x + "\n";
+
+            x -= y;
+            output += "x -= y ... Result = " + x + "\n";
+
+            x *= y;
+            output += "x *= y ... Result = " + x + "\n";
+
+            x /= y;
+            output += "x /= y ... Result = " + x + "\n";
+
+            alert(output);
+        }
+    </script>
+</body>
+</html>
