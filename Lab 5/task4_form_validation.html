@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4 - Sign Up Form Validation</title>
+</head>
+<body>
+    <h2>Sign Up Form (Java Script Validation)</h2>
+    <form onsubmit="return validateForm()">
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" id="name"> <span id="nameErr" style="color:red"></span></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="gender" value="Male"> Male
+                    <input type="radio" name="gender" value="Female"> Female
+                    <span id="genderErr" style="color:red"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="text" id="email"> <span id="emailErr" style="color:red"></span></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><textarea id="address"></textarea> <span id="addressErr" style="color:red"></span></td>
+            </tr>
+            <tr>
+                <td>Login ID:</td>
+                <td><input type="text" id="loginId"> <span id="loginIdErr" style="color:red"></span></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" id="password"> <span id="passwordErr" style="color:red"></span></td>
+            </tr>
+            <tr>
+                <td>Agreed with Policy:</td>
+                <td><input type="checkbox" id="policy"> <span id="policyErr" style="color:red"></span></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function validateForm() {
+            var valid = true;
+
+            var name = document.getElementById("name").value;
+            document.getElementById("nameErr").textContent = name === "" ? "Name is required" : "";
+            if (name === "") valid = false;
+
+            var gender = document.querySelector('input[name="gender"]:checked');
+            document.getElementById("genderErr").textContent = !gender ? "Gender is required" : "";
+            if (!gender) valid = false;
+
+            var email = document.getElementById("email").value;
+            document.getElementById("emailErr").textContent = email === "" ? "Email is required" : "";
+            if (email === "") valid = false;
+
+            var address = document.getElementById("address").value;
+            document.getElementById("addressErr").textContent = address === "" ? "Address is required" : "";
+            if (address === "") valid = false;
+
+            var loginId = document.getElementById("loginId").value;
+            document.getElementById("loginIdErr").textContent = loginId === "" ? "Login ID is required" : "";
+            if (loginId === "") valid = false;
+
+            var password = document.getElementById("password").value;
+            document.getElementById("passwordErr").textContent = password === "" ? "Password is required" : "";
+            if (password === "") valid = false;
+
+            var policy = document.getElementById("policy").checked;
+            document.getElementById("policyErr").textContent = !policy ? "You must agree" : "";
+            if (!policy) valid = false;
+
+            return valid;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5 - Display Selected Text</title>
+</head>
+<body>
+    <h3>Display of selected Text using onSelect Event</h3>
+    Select Text <input type="text" id="textInput" onselect="showSelected()">
+    <div id="display" style="background-color: cyan; padding: 20px; margin-top: 10px; min-height: 50px; width: 200px;"></div>
+
+    <script>
+        function showSelected() {
+            var input = document.getElementById("textInput");
+            var selected = input.value.substring(input.selectionStart, input.selectionEnd);
+            document.getElementById("display").textContent = selected;
+        }
+    </script>
+</body>
+</html>
