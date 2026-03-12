@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 3: Arrow Add Function</title>
+</head>
+<body>
+    <h1>Task 3: Convert Add Function to Arrow Function</h1>
+
+    <p id="output"></p>
+
+    <script>
+        // Regular function
+        function add(a, b) {
+            return a + b;
+        }
+
+        // Converted to arrow function
+        const addArrow = (a, b) => a + b;
+
+        document.getElementById("output").innerHTML =
+            "Regular function: add(5, 3) = " + add(5, 3) + "<br>" +
+            "Arrow function: addArrow(5, 3) = " + addArrow(5, 3);
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 4: Callback - processData</title>
+</head>
+<body>
+    <h1>Task 4: Callback Function - processData</h1>
+    <p>Open the browser console to see the output.</p>
+
+    <button onclick="getData(processData)">Get Data</button>
+
+    <script>
+        function getData(callback) {
+            const data = { name: "Bilawal", roll: 32 };
+            console.log("getData: Data fetched successfully");
+            callback(data);
+        }
+
+        function processData(data) {
+            console.log("processData: Received data:");
+            console.log("Name:", data.name);
+            console.log("Roll:", data.roll);
+        }
+    </script>
+</body>
+</html>

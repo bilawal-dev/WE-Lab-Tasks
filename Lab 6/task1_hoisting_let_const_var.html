@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 1: Hoisting - let, const, var</title>
+</head>
+<body>
+    <h1>Task 1: Explore Hoisting for let, const and var</h1>
+    <p>Open the browser console to see the output.</p>
+
+    <script>
+        // var is hoisted and initialized with undefined
+        console.log("--- var hoisting ---");
+        console.log("x before declaration:", x); // undefined
+        var x = 10;
+        console.log("x after declaration:", x); // 10
+
+        // let is hoisted but NOT initialized (Temporal Dead Zone)
+        console.log("--- let hoisting ---");
+        try {
+            console.log("y before declaration:", y);
+        } catch (e) {
+            console.log("Error accessing y before declaration:", e.message);
+        }
+        let y = 20;
+        console.log("y after declaration:", y); // 20
+
+        // const is hoisted but NOT initialized (Temporal Dead Zone)
+        console.log("--- const hoisting ---");
+        try {
+            console.log("z before declaration:", z);
+        } catch (e) {
+            console.log("Error accessing z before declaration:", e.message);
+        }
+        const z = 30;
+        console.log("z after declaration:", z); // 30
+    </script>
+</body>
+</html>

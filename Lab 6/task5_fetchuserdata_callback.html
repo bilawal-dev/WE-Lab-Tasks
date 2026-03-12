@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 5: fetchUserData with Callback</title>
+</head>
+<body>
+    <h1>Task 5: fetchUserData - Simulated Fetch with Callback</h1>
+    <p>Open the browser console to see the output.</p>
+
+    <button onclick="fetchUserData(displayUser)">Fetch User Data</button>
+    <p id="status"></p>
+
+    <script>
+        function fetchUserData(callback) {
+            document.getElementById("status").innerText = "Fetching user data... (10 seconds)";
+            console.log("Fetching user data...");
+
+            setTimeout(function () {
+                const user = { name: "Bilawal", roll: 32, semester: 6 };
+                console.log("User data fetched after 10 seconds");
+                document.getElementById("status").innerText = "Data fetched!";
+                callback(user);
+            }, 10000);
+        }
+
+        function displayUser(user) {
+            console.log("User Name:", user.name);
+            console.log("Roll No:", user.roll);
+            console.log("Semester:", user.semester);
+        }
+    </script>
+</body>
+</html>

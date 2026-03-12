@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 6: Promise - getData</title>
+</head>
+<body>
+    <h1>Task 6: Rewrite getData with Promise</h1>
+    <p>Open the browser console to see the output.</p>
+
+    <button onclick="run()">Get Data</button>
+
+    <script>
+        function getData() {
+            return new Promise(function (resolve, reject) {
+                const data = { name: "Bilawal", roll: 32 };
+                if (data) {
+                    resolve(data);
+                } else {
+                    reject("Error: No data found");
+                }
+            });
+        }
+
+        function run() {
+            getData()
+                .then(function (data) {
+                    console.log("Data received:");
+                    console.log("Name:", data.name);
+                    console.log("Roll:", data.roll);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        }
+    </script>
+</body>
+</html>

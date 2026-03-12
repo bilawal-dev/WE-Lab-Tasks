@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 7: Async/Await - getData</title>
+</head>
+<body>
+    <h1>Task 7: Convert Promise to Async/Await</h1>
+    <p>Open the browser console to see the output.</p>
+
+    <button onclick="run()">Get Data</button>
+
+    <script>
+        function getData() {
+            return new Promise(function (resolve, reject) {
+                const data = { name: "Bilawal", roll: 32 };
+                if (data) {
+                    resolve(data);
+                } else {
+                    reject("Error: No data found");
+                }
+            });
+        }
+
+        async function run() {
+            try {
+                const data = await getData();
+                console.log("Data received:");
+                console.log("Name:", data.name);
+                console.log("Roll:", data.roll);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+    </script>
+</body>
+</html>
